@@ -40,7 +40,9 @@ public class AdvancedSolarsConfig {
         public int ultimateHybridSolarHelmetTransfer = 2000;
     }
 
-    @Config.Comment("Enable or Disable each item here.")
+    @Config.Comment({"Enable or Disable each item here",
+    				"WARNING!!! Remember that Solar Panel Recipes depend on each other WARNING!!!",
+    				"So if you disable first tier solar panel recipe, other recipes will not work!!!"})
     @Config.RequiresMcRestart
     public static EnabledItems enabledItems = new EnabledItems();
 

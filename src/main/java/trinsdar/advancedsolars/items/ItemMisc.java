@@ -7,8 +7,6 @@ import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import trinsdar.advancedsolars.AdvancedSolarsClassic;
-
 import java.util.Arrays;
 import java.util.List;
 

@@ -28,7 +28,8 @@ public class Registry {
     reinforcedIridiumIronPlate = new ItemMisc("reinforcedIridiumIronPlate", 7),
     irradiantReinforcedPlate = new ItemMisc("irradiantReinforcedPlate", 8),
     sunnariumPart = new ItemMisc("sunnariumPart", 9),
-    iridiumIngot = new ItemMisc("iridiumIngot", 10);
+    iridiumIngot = new ItemMisc("iridiumIngot", 10),
+    quantumCore = new ItemMisc("quantumCore", 14);
 
     public static final ItemArmorAdvancedSolarHelmet
     advancedSolarHelmet = new ItemArmorAdvancedSolarHelmet("advanced", 11, 16, 2, AdvancedSolarsConfig.powerValues.advancedSolarHelmetStorage, AdvancedSolarsConfig.powerValues.advancedSolarHelmetTransfer, 2, 800, 0.9D, ":textures/models/advancedsolarhelmet"),
@@ -64,6 +65,7 @@ public class Registry {
             IC2.getInstance().createItem(irradiantReinforcedPlate);
             IC2.getInstance().createItem(sunnariumPart);
             IC2.getInstance().createItem(iridiumIngot);
+            IC2.getInstance().createItem(quantumCore);
         }
         if (AdvancedSolarsConfig.enabledItems.enableAdvancedSolarHelmet){
             IC2.getInstance().createItem(advancedSolarHelmet);
