@@ -35,8 +35,8 @@ public class TileEntityAdvancedSolarPanel extends TileEntityGeneratorBase {
         super(4);
         this.tier = 1;
         this.ticker = 127;
-        this.production = 16;
-        this.lowerProduction = 2.0D;
+        this.production = 8;
+        this.lowerProduction = 1.0D;
         this.maxStorage = 32000;
         this.maxOutput = 32;
         this.config = (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarAdvanced;
@@ -174,8 +174,8 @@ public class TileEntityAdvancedSolarPanel extends TileEntityGeneratorBase {
 
     @Override
     public int getOutput() {
-        if (skyBlockCheck()){
-            if (isSunVisible()){
+        if (skyBlockCheck()) {
+            if (isSunVisible()) {
                 return (int)(this.production * this.config);
             }else {
                 return (int)(this.lowerProduction * this.config);
@@ -186,11 +186,11 @@ public class TileEntityAdvancedSolarPanel extends TileEntityGeneratorBase {
 
     }
 
-    public boolean skyBlockCheck(){
+    public boolean skyBlockCheck() {
         return this.getWorld().canBlockSeeSky(this.getPos().up()) && this.getWorld().provider.hasSkyLight();
     }
 
-    public boolean isSunVisible(){
+    public boolean isSunVisible() {
         return isSunVisible(this.getWorld(), this.getPos().up());
     }
 
@@ -211,11 +211,11 @@ public class TileEntityAdvancedSolarPanel extends TileEntityGeneratorBase {
         return 1.0D;
     }
 
-    public static class TileEntityHybridSolarPanel extends TileEntityAdvancedSolarPanel{
+    public static class TileEntityHybridSolarPanel extends TileEntityAdvancedSolarPanel {
         public TileEntityHybridSolarPanel() {
             this.tier = 2;
-            this.production = 128;
-            this.lowerProduction = 16.0D;
+            this.production = 64;
+            this.lowerProduction = 8.0D;
             this.maxStorage = 100000;
             this.maxOutput = 128;
             this.config = (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarHybrid;
@@ -227,13 +227,29 @@ public class TileEntityAdvancedSolarPanel extends TileEntityGeneratorBase {
         }
     }
 
-    public static class TileEntityUltimateHybridSolarPanel extends TileEntityAdvancedSolarPanel{
+    public static class TileEntityUltimateHybridSolarPanel extends TileEntityAdvancedSolarPanel {
         public TileEntityUltimateHybridSolarPanel() {
-            this.tier = 4;
-            this.production =1024;
-            this.lowerProduction = 128.0D;
+            this.tier = 3;
+            this.production = 512;
+            this.lowerProduction = 64.0D;
             this.maxStorage = 1000000;
-            this.maxOutput = 2048;
+            this.maxOutput = 512;
+            this.config = (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarUltimateHybrid;
+        }
+
+        @Override
+        public LocaleComp getBlockName() {
+            return AdvancedSolarLang.ultimateHybridSolarPanel;
+        }
+    }
+    
+    public static class TileEntityQuantumSolarPanel extends TileEntityAdvancedSolarPanel {
+        public TileEntityQuantumSolarPanel() {
+            this.tier = 4;
+            this.production = 4096;
+            this.lowerProduction = 2048.0D;
+            this.maxStorage = 1000000;
+            this.maxOutput = 512;
             this.config = (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarUltimateHybrid;
         }
 

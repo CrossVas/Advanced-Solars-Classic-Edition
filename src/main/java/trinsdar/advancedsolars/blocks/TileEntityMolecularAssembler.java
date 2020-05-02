@@ -1,6 +1,5 @@
 package trinsdar.advancedsolars.blocks;
 
-import ic2.api.classic.item.IMachineUpgradeItem;
 import ic2.api.classic.recipe.machine.IMachineRecipeList;
 import ic2.api.classic.tile.MachineType;
 import ic2.core.block.base.tile.TileEntityBasicElectricMachine;
