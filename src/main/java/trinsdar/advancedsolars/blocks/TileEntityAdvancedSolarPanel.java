@@ -249,7 +249,7 @@ public class TileEntityAdvancedSolarPanel extends TileEntityGeneratorBase {
             this.production = 4096;
             this.lowerProduction = 2048.0D;
             this.maxStorage = 10000000;
-            this.maxOutput = 2048;
+            this.maxOutput = 4096;
             this.config = (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarQuantum;
         }
 
