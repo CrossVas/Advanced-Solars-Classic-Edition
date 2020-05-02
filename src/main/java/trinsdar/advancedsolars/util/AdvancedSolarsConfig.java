@@ -55,6 +55,7 @@ public class AdvancedSolarsConfig {
         public boolean enableUltimateHybridSolarPanel = true;
         public boolean enableQuantumSolarPanel = true;
         public boolean enableMiscCraftingItems = true;
+        public boolean disableIC2CompactedSolarPanels = true;
     }
 
     @Config.Comment("Misc. stuff")

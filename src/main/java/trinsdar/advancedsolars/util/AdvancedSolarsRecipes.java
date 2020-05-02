@@ -7,8 +7,11 @@ import ic2.core.platform.registry.Ic2Items;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.registries.ForgeRegistry;
 
 public class AdvancedSolarsRecipes {
     public static void init(){
@@ -19,6 +22,11 @@ public class AdvancedSolarsRecipes {
     static ICraftingRecipeList recipes = ClassicRecipes.advCrafting;
 
     public static void initCraftingRecipes() {
+    	if (AdvancedSolarsConfig.enabledItems.disableIC2CompactedSolarPanels) {
+    		removeRecipe("ic2", "shaped_tile.blockSolarLV_-1293705004");
+    		removeRecipe("ic2", "shaped_tile.blockSolarMV_1807852596");
+    		removeRecipe("ic2", "shaped_tile.blockSolarHV_-965625513");
+    	}
     	if (AdvancedSolarsConfig.enabledItems.enableMiscCraftingItems) {
     		recipes.addRecipe(new ItemStack(Registry.irradiantUranium), " G ", "GUG", " G ", 'G', Items.GLOWSTONE_DUST, 'U', "ingotUranium");
     		recipes.addRecipe(new ItemStack(Registry.irradiantGlassPane, 6, 0), "RRR", "UGU", "RRR", 'R', Ic2Items.reinforcedGlass, 'U', Registry.irradiantUranium, 'G', Items.GLOWSTONE_DUST);
@@ -66,4 +74,9 @@ public class AdvancedSolarsRecipes {
             TileEntityCompressor.addRecipe(Ic2Items.iridiumOre, new ItemStack(Registry.iridiumIngot));
         }
     }
+    
+	public static void removeRecipe(String modid, String recipeId) {
+		((ForgeRegistry<?>) ForgeRegistries.RECIPES).remove(new ResourceLocation(modid, recipeId));
+	}
+
 }
