@@ -11,15 +11,16 @@ import static ic2.core.platform.textures.Ic2Icons.addTextureEntry;
 
 public class Icons {
     @SideOnly(Side.CLIENT)
-    public static void loadSprites()
-    {
+    public static void loadSprites() {
         addSprite(new SpriteData("advancedsolarpanel", "advancedsolars:textures/sprites/advancedsolarpanel.png", new SpriteInfo(1, 12)));
         addSprite(new SpriteData("hybridsolarpanel", "advancedsolars:textures/sprites/hybridsolarpanel.png", new SpriteInfo(1, 12)));
         addSprite(new SpriteData("ultimatesolarpanel", "advancedsolars:textures/sprites/ultimatesolarpanel.png", new SpriteInfo(1, 12)));
+        addSprite(new SpriteData("quantumsolarpanel", "advancedsolars:textures/sprites/quantumsolarpanel.png", new SpriteInfo(1, 12)));
         addSprite(new SpriteData("advancedsolars_items", "advancedsolars:textures/sprites/adv_items.png", new SpriteInfo(16, 1)));
         addTextureEntry(new TextureEntry("advancedsolarpanel", 0, 0, 1, 12));
         addTextureEntry(new TextureEntry("hybridsolarpanel", 0, 0, 1, 12));
         addTextureEntry(new TextureEntry("ultimatesolarpanel", 0, 0, 1, 12));
+        addTextureEntry(new TextureEntry("quantumsolarpanel", 0, 0, 1, 12));
         addTextureEntry(new TextureEntry("advancedsolars_items", 0, 0, 16, 1));
     }
 }

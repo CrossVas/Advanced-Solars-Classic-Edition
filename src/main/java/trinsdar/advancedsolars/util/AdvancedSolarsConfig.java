@@ -18,7 +18,7 @@ public class AdvancedSolarsConfig {
         @Config.Comment("Base energy generation multiplier values for ultimate hybrid - increase them for higher yeilds.")
         public float energyGeneratorSolarUltimateHybrid = 1.0F;
         @Config.Comment("Base energy generation multiplier values for ultimate hybrid - increase them for higher yeilds.")
-        public float energyGeneratorSolarQuantumHybrid = 1.0F;
+        public float energyGeneratorSolarQuantum = 1.0F;
     }
 
     @Config.Comment("Set the max EU storage and max EU transfer of each item here.")

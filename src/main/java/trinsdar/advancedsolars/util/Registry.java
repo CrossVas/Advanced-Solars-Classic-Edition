@@ -14,7 +14,8 @@ public class Registry {
     public static final BlockAdvancedSolarPanels
     advancedSolarPanel = new BlockAdvancedSolarPanels("advancedSolarPanel", AdvancedSolarLang.advancedSolarPanel),
     hybridSolarPanel = new BlockAdvancedSolarPanels("hybridSolarPanel", AdvancedSolarLang.hybridSolarPanel),
-    ultimateHybridSolarPanel = new BlockAdvancedSolarPanels("ultimateSolarPanel", AdvancedSolarLang.ultimateHybridSolarPanel);
+    ultimateHybridSolarPanel = new BlockAdvancedSolarPanels("ultimateSolarPanel", AdvancedSolarLang.ultimateHybridSolarPanel),
+    quantumSolarPanel = new BlockAdvancedSolarPanels("quantumSolarPanel", AdvancedSolarLang.quantumSolarPanel);
 
     public static final ItemMisc
     sunnarium = new ItemMisc("sunnarium", 0),
@@ -48,6 +49,9 @@ public class Registry {
         if (AdvancedSolarsConfig.enabledItems.enableUltimateHybridSolarPanel){
             IC2.getInstance().createBlock(ultimateHybridSolarPanel, ItemBlockAdvancedSolarPanel.class);
         }
+        if (AdvancedSolarsConfig.enabledItems.enableQuantumSolarPanel) {
+        	IC2.getInstance().createBlock(quantumSolarPanel, ItemBlockAdvancedSolarPanel.class);
+        }
         if (AdvancedSolarsConfig.enabledItems.enableMiscCraftingItems){
             IC2.getInstance().createItem(sunnarium);
             IC2.getInstance().createItem(sunnariumAlloy);
@@ -67,21 +71,23 @@ public class Registry {
         if (AdvancedSolarsConfig.enabledItems.enableHybridSolarHelmet){
             IC2.getInstance().createItem(hybridSolarHelmet);
         }
-        if (AdvancedSolarsConfig.enabledItems.enableUltimateHybridSolarPanel){
+        if (AdvancedSolarsConfig.enabledItems.enableUltimateHybridSolarPanel) {
             IC2.getInstance().createItem(ultimateHybridSolarHelmet);
         }
     }
 
-    public static void registerTiles()
-    {
-        if (AdvancedSolarsConfig.enabledItems.enableAdvancedSolarPanel){
+    public static void registerTiles() {
+        if (AdvancedSolarsConfig.enabledItems.enableAdvancedSolarPanel) {
             GameRegistry.registerTileEntity(TileEntityAdvancedSolarPanel.class, new ResourceLocation(AdvancedSolarsClassic.MODID, "tileEntityAdvancedSolarPanel"));
         }
         if (AdvancedSolarsConfig.enabledItems.enableHybridSolarPanel){
             GameRegistry.registerTileEntity(TileEntityAdvancedSolarPanel.TileEntityHybridSolarPanel.class, new ResourceLocation(AdvancedSolarsClassic.MODID, "tileEntityHybridSolarPanel"));
         }
-        if (AdvancedSolarsConfig.enabledItems.enableUltimateHybridSolarPanel){
+        if (AdvancedSolarsConfig.enabledItems.enableUltimateHybridSolarPanel) {
             GameRegistry.registerTileEntity(TileEntityAdvancedSolarPanel.TileEntityUltimateHybridSolarPanel.class, new ResourceLocation(AdvancedSolarsClassic.MODID, "tileEntityUltimateHybridSolarPanel"));
+        }
+        if (AdvancedSolarsConfig.enabledItems.enableQuantumSolarPanel) {
+        	GameRegistry.registerTileEntity(TileEntityAdvancedSolarPanel.TileEntityQuantumSolarPanel.class, new ResourceLocation(AdvancedSolarsClassic.MODID, "tileEntityQuantumSolarPanel"));
         }
     }
 }

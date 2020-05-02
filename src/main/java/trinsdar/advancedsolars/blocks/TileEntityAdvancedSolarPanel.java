@@ -248,14 +248,14 @@ public class TileEntityAdvancedSolarPanel extends TileEntityGeneratorBase {
             this.tier = 4;
             this.production = 4096;
             this.lowerProduction = 2048.0D;
-            this.maxStorage = 1000000;
-            this.maxOutput = 512;
-            this.config = (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarUltimateHybrid;
+            this.maxStorage = 10000000;
+            this.maxOutput = 2048;
+            this.config = (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarQuantum;
         }
 
         @Override
         public LocaleComp getBlockName() {
-            return AdvancedSolarLang.ultimateHybridSolarPanel;
+            return AdvancedSolarLang.quantumSolarPanel;
         }
     }
 }

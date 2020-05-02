@@ -1,6 +1,7 @@
 tile.advancedSolarPanel.name=Advanced Solar Panel
 tile.hybridSolarPanel.name=Hybrid Solar Panel
 tile.ultimateSolarPanel.name=Ultimate Hybrid Solar Panel
+tile.quantumSolarPanel.name=Quantum Solar Panel
 
 item.sunnarium.name=Sunnarium
 item.sunnariumAlloy.name=Sunnarium Alloy

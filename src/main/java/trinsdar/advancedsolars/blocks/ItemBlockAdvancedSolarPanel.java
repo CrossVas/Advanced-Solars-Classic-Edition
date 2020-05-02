@@ -31,13 +31,14 @@ public class ItemBlockAdvancedSolarPanel extends ItemBlockRare {
 
     private String getTier() {
         if (this.getBlock() == Registry.advancedSolarPanel){
-
-            return getTierFromOutput(AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarAdvanced * 16.0F);
+            return getTierFromOutput(AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarAdvanced * 8.0F);
         }else if (this.getBlock() == Registry.hybridSolarPanel){
-            return getTierFromOutput(AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarHybrid * 128.0F);
+            return getTierFromOutput(AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarHybrid * 64.0F);
         }else if (this.getBlock() == Registry.ultimateHybridSolarPanel){
-            return getTierFromOutput(AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarUltimateHybrid * 1024.0F);
-        }else {
+            return getTierFromOutput(AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarUltimateHybrid * 512.0F);
+        } else if (this.getBlock() == Registry.quantumSolarPanel) {
+        	return getTierFromOutput(AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarQuantum * 4096.0F);
+        } else {
             return "";
         }
     }
@@ -67,24 +68,28 @@ public class ItemBlockAdvancedSolarPanel extends ItemBlockRare {
 
     private double getProduction() {
         if (this.getBlock() == Registry.advancedSolarPanel){
-            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarAdvanced * 16.0F;
+            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarAdvanced * 8.0F;
         }else if (this.getBlock() == Registry.hybridSolarPanel){
-            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarHybrid * 128.0F;
+            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarHybrid * 64.0F;
         }else if (this.getBlock() == Registry.ultimateHybridSolarPanel){
-            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarUltimateHybrid * 1024.0F;
-        }else {
+            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarUltimateHybrid * 512.0F;
+        } else if (this.getBlock() == Registry.quantumSolarPanel) {
+        	return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarQuantum * 4096.0F;
+        } else {
             return 0.0D;
         }
     }
 
     private double getLowerProduction() {
         if (this.getBlock() == Registry.advancedSolarPanel){
-            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarAdvanced * 2.0F;
+            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarAdvanced * 1.0F;
         }else if (this.getBlock() == Registry.hybridSolarPanel){
-            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarHybrid * 16.0F;
+            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarHybrid * 8.0F;
         }else if (this.getBlock() == Registry.ultimateHybridSolarPanel){
-            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarUltimateHybrid * 128.0F;
-        }else {
+            return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarUltimateHybrid * 64.0F;
+        } else if (this.getBlock() == Registry.quantumSolarPanel) {
+        	return (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarQuantum * 2048.0F;
+        } else {
             return 0.0D;
         }
     }
