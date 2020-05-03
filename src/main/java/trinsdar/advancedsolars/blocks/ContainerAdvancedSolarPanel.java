@@ -16,24 +16,25 @@ import trinsdar.advancedsolars.util.AdvancedSolarPanelComp;
 
 public class ContainerAdvancedSolarPanel extends ContainerTileComponent<TileEntityAdvancedSolarPanel> {
 
-    public static Box2D solarPanelLightBox = new Box2D(147, 41, 12, 12);
-    public static Vec2i daySolarLightPos = new Vec2i(177, 17);
-    public static Vec2i nightSolarLightPos = new Vec2i(193, 17);
-    public static Box2D chargeBox = new Box2D(141, 60, 24, 9);
-    public static Vec2i chargePos = new Vec2i(176, 0);
+    public static Box2D solarPanelLightBox = new Box2D(126, 60, 14, 14);
+    public static Box2D lunarPanelLightBox = new Box2D(144, 60, 14, 14);
+    public static Vec2i daySolarLightPos = new Vec2i(178, 16);
+    public static Vec2i nightSolarLightPos = new Vec2i(193, 16);
+    public static Box2D chargeBox = new Box2D(91, 61, 24, 14);
+    public static Vec2i chargePos = new Vec2i(178, 0);
 
     public ContainerAdvancedSolarPanel(InventoryPlayer player, TileEntityAdvancedSolarPanel tile) {
         super(tile);
-        this.addSlotToContainer(new SlotCharge(tile, tile.tier, 0, 98, 39));
-        this.addSlotToContainer(new SlotCharge(tile, tile.tier, 1, 116, 39));
-        this.addSlotToContainer(new SlotCharge(tile, tile.tier, 2, 98, 57));
-        this.addSlotToContainer(new SlotCharge(tile, tile.tier, 3, 116, 57));
+        this.addSlotToContainer(new SlotCharge(tile, tile.tier, 0, 8, 59));
+        this.addSlotToContainer(new SlotCharge(tile, tile.tier, 1, 26, 59));
+        this.addSlotToContainer(new SlotCharge(tile, tile.tier, 2, 44, 59));
+        this.addSlotToContainer(new SlotCharge(tile, tile.tier, 3, 62, 59));
 
         if (tile.skyBlockCheck()){
             if (tile.isSunVisible()){
                 this.addComponent(new AdvancedSolarPanelComp(tile, solarPanelLightBox, daySolarLightPos));
             }else {
-                this.addComponent(new AdvancedSolarPanelComp(tile, solarPanelLightBox, nightSolarLightPos));
+                this.addComponent(new AdvancedSolarPanelComp(tile, lunarPanelLightBox, nightSolarLightPos));
             }
         }
         this.addComponent(new AdvancedSolarEnergyStringComp(tile));

@@ -73,7 +73,7 @@ public class TileEntityAdvancedSolarPanel extends TileEntityGeneratorBase {
     @Override
     public boolean isConverting() {
         if (this.skyBlockCheck()){
-            if (isSunVisible()){
+            if (isSunVisible()) {
                 return this.storage + this.production <= this.maxStorage;
             }else {
                 return this.storage + this.lowerProduction <= this.maxStorage;
@@ -249,7 +249,7 @@ public class TileEntityAdvancedSolarPanel extends TileEntityGeneratorBase {
             this.production = 4096;
             this.lowerProduction = 2048.0D;
             this.maxStorage = 10000000;
-            this.maxOutput = 4096;
+            this.maxOutput = 8192;
             this.config = (double) AdvancedSolarsConfig.powerGeneration.energyGeneratorSolarQuantum;
         }
 

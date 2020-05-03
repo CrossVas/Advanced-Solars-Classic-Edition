@@ -13,7 +13,7 @@ import java.util.List;
 public class AdvancedSolarEnergyStringComp extends GuiComponent {
     byte lastMode;
     TileEntityAdvancedSolarPanel block;
-    int white = 13487565;
+    int white = 16777215;
 
     public AdvancedSolarEnergyStringComp(TileEntityAdvancedSolarPanel tile) {
         super(Ic2GuiComp.nullBox);
@@ -29,11 +29,11 @@ public class AdvancedSolarEnergyStringComp extends GuiComponent {
     @SideOnly(Side.CLIENT)
     public void drawFrontground(GuiIC2 gui, int mouseX, int mouseY) {
         if (block instanceof TileEntityAdvancedSolarPanel.TileEntityUltimateHybridSolarPanel){
-            gui.drawString(block.getBlockName(), 20, 5, 7718655);
+            gui.drawString(block.getBlockName(), 20, 7, 43690);
         }else if (block instanceof TileEntityAdvancedSolarPanel.TileEntityHybridSolarPanel){
-            gui.drawString(block.getBlockName(), 41, 5, 7718655);
+            gui.drawString(block.getBlockName(), 41, 7, 43690);
         }else {
-            gui.drawString(block.getBlockName(), 33, 5, 7718655);
+            gui.drawString(block.getBlockName(), 33, 7, 43690);
         }
         int eu = this.block.getStoredEU();
         int max = this.block.getMaxEU();
@@ -41,11 +41,8 @@ public class AdvancedSolarEnergyStringComp extends GuiComponent {
             eu = max;
         }
 
-        gui.drawString(AdvancedSolarLang.storage.getLocalizedFormatted(eu), 7, 21, white);
-        gui.drawString("/" + max, 7, 31, white);
-        gui.drawString(AdvancedSolarLang.maxOutput, 7, 41, white);
-        gui.drawString("" + this.block.getMaxOutput() + " EU/t", 7, 51, white);
-        gui.drawString(AdvancedSolarLang.generating, 7, 61, white);
-        gui.drawString("" + this.block.getOutput() + " EU/t", 7, 71, white);
+        gui.drawString(AdvancedSolarLang.storage.getLocalizedFormatted(eu) + "/" + max, 20, 21, white);
+        gui.drawString(AdvancedSolarLang.maxOutput.getLocalized() + " " + this.block.getMaxOutput() + " " + "EU/t", 20, 31, white);
+        gui.drawString(AdvancedSolarLang.generating.getLocalized() + " " + this.block.getOutput() + " " + "EU/t", 20, 41, white);
     }
 }
