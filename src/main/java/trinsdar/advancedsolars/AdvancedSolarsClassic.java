@@ -15,8 +15,8 @@ import trinsdar.advancedsolars.proxy.CommonProxy;
 
 @Mod(modid = AdvancedSolarsClassic.MODID, name = AdvancedSolarsClassic.MODNAME, version = AdvancedSolarsClassic.MODVERSION, dependencies = AdvancedSolarsClassic.DEPENDS)
 public class AdvancedSolarsClassic {
-    public static final String MODID = "advancedsolars";
-    public static final String MODNAME = "Advanced Solars Classic Edition";
+    public static final String MODID = "advancedsolarpanels";
+    public static final String MODNAME = "Advanced Solar Panels Classic Edition";
     public static final String MODVERSION = "@VERSION@";
     public static final String DEPENDS ="required-after:ic2;required-after:ic2-classic-spmod";
 
