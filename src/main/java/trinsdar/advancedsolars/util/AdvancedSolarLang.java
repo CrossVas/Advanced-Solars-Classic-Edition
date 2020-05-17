@@ -19,4 +19,7 @@ public class AdvancedSolarLang {
     public static LocaleComp helmetProduction = new LocaleItemInfoComp("itemInfo.helmetProduction.name");
     public static LocaleComp helmetLowerPorduction = new LocaleItemInfoComp("itemInfo.helmetLowerProduction.name");
     public static LocaleComp electricLowerProduction = new LocaleItemInfoComp("itemInfo.electricLowerProduction.name");
+
+    public static LocaleComp doubleSlab = new LangComponentHolder.LocaleBlockComp("block.doubleSlab");
+    public static LocaleComp seamlessDoubleStab = new LangComponentHolder.LocaleBlockComp("block.seamlessDoubleSlab");
 }

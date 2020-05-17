@@ -1,10 +1,13 @@
 package trinsdar.advancedsolars.util;
 
 import ic2.core.IC2;
+import ic2.core.item.block.ItemBlockRare;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import trinsdar.advancedsolars.AdvancedSolarsClassic;
 import trinsdar.advancedsolars.blocks.BlockAdvancedSolarPanels;
+import trinsdar.advancedsolars.blocks.BlockDoubleSlab;
+import trinsdar.advancedsolars.blocks.BlockDoubleSlab.BlockSeamlessDoubleSlab;
 import trinsdar.advancedsolars.blocks.ItemBlockAdvancedSolarPanel;
 import trinsdar.advancedsolars.blocks.TileEntityAdvancedSolarPanel;
 import trinsdar.advancedsolars.items.ItemArmorAdvancedSolarHelmet;
@@ -16,7 +19,7 @@ public class Registry {
     hybridSolarPanel = new BlockAdvancedSolarPanels("hybridSolarPanel", AdvancedSolarLang.hybridSolarPanel),
     ultimateHybridSolarPanel = new BlockAdvancedSolarPanels("ultimateSolarPanel", AdvancedSolarLang.ultimateHybridSolarPanel),
     quantumSolarPanel = new BlockAdvancedSolarPanels("quantumSolarPanel", AdvancedSolarLang.quantumSolarPanel);
-
+    
     public static final ItemMisc
     sunnarium = new ItemMisc("sunnarium", 0),
     sunnariumAlloy = new ItemMisc("sunnariumAlloy", 1),
@@ -31,6 +34,9 @@ public class Registry {
     iridiumIngot = new ItemMisc("iridiumIngot", 10),
     quantumCore = new ItemMisc("quantumCore", 14);
 
+    public static BlockDoubleSlab doubleSlab = new BlockDoubleSlab("doublestoneslab", AdvancedSolarLang.doubleSlab);
+    public static BlockSeamlessDoubleSlab seamlessDoubleSlab = new BlockSeamlessDoubleSlab("seamlessdoublestoneslab", AdvancedSolarLang.seamlessDoubleStab);
+    
     public static final ItemArmorAdvancedSolarHelmet
     advancedSolarHelmet = new ItemArmorAdvancedSolarHelmet("advanced", 11, 16, 2, AdvancedSolarsConfig.powerValues.advancedSolarHelmetStorage, AdvancedSolarsConfig.powerValues.advancedSolarHelmetTransfer, 2, 800, 0.9D, ":textures/models/advancedsolarhelmet"),
     hybridSolarHelmet = new ItemArmorAdvancedSolarHelmet("hybrid", 12, 128, 16, AdvancedSolarsConfig.powerValues.hybridSolarHelmetStorage, AdvancedSolarsConfig.powerValues.hybridSolarHelmetTransfer, 3, 900, 1.0D, ":textures/models/hybridsolarhelmet"),
@@ -47,7 +53,7 @@ public class Registry {
         if (AdvancedSolarsConfig.enabledItems.enableHybridSolarPanel){
             IC2.getInstance().createBlock(hybridSolarPanel, ItemBlockAdvancedSolarPanel.class);
         }
-        if (AdvancedSolarsConfig.enabledItems.enableUltimateHybridSolarPanel){
+        if (AdvancedSolarsConfig.enabledItems.enableUltimateHybridSolarPanel) {
             IC2.getInstance().createBlock(ultimateHybridSolarPanel, ItemBlockAdvancedSolarPanel.class);
         }
         if (AdvancedSolarsConfig.enabledItems.enableQuantumSolarPanel) {
@@ -76,6 +82,8 @@ public class Registry {
         if (AdvancedSolarsConfig.enabledItems.enableUltimateHybridSolarPanel) {
             IC2.getInstance().createItem(ultimateHybridSolarHelmet);
         }
+        IC2.getInstance().createBlock(doubleSlab, ItemBlockRare.class);
+        IC2.getInstance().createBlock(seamlessDoubleSlab, ItemBlockRare.class);
     }
 
     public static void registerTiles() {

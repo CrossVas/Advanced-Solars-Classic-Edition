@@ -13,8 +13,7 @@ import mezz.jei.api.ingredients.IIngredientBlacklist;
 public class JeiPlugin implements IModPlugin {
 	
 	@Override
-	public void onRuntimeAvailable(@Nonnull IJeiRuntime jeiRuntime) {
-	}
+	public void onRuntimeAvailable(@Nonnull IJeiRuntime jeiRuntime) {}
 	
 	@Override
 	public void register(@Nonnull IModRegistry registry) {

@@ -22,6 +22,10 @@ public class AdvancedSolarsRecipes {
     static ICraftingRecipeList recipes = ClassicRecipes.advCrafting;
 
     public static void initCraftingRecipes() {
+    	
+    	recipes.addRecipe(new ItemStack(Registry.doubleSlab), "S ", "S ", 'S', new ItemStack(Blocks.STONE_SLAB, 1, 0));
+    	recipes.addShapelessRecipe(new ItemStack(Registry.seamlessDoubleSlab), Registry.doubleSlab);
+    	
     	if (AdvancedSolarsConfig.enabledItems.disableIC2CompactedSolarPanels) {
     		removeRecipe("ic2", "shaped_tile.blockSolarLV_-1293705004");
     		removeRecipe("ic2", "shaped_tile.blockSolarMV_1807852596");

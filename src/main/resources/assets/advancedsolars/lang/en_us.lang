@@ -3,6 +3,9 @@ tile.hybridSolarPanel.name=Hybrid Solar Panel
 tile.ultimateSolarPanel.name=Ultimate Hybrid Solar Panel
 tile.quantumSolarPanel.name=Quantum Solar Panel
 
+block.doubleSlab.name=Double Stone Slab
+block.seamlessDoubleSlab.name=Seamless Double Stone Slab
+
 item.sunnarium.name=Sunnarium
 item.sunnariumAlloy.name=Sunnarium Alloy
 item.irradiantUranium.name=Irradiant Uranium
