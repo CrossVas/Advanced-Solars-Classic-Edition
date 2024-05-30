@@ -22,5 +22,8 @@
   "item_info.advanced_solars.solar_panel_tier": "Выходной уровень: %s",
   "item_info.advanced_solars.helmet_production": "Генерирует %s EU/t пока видно ясное небо;",
   "item_info.advanced_solars.helmet_lower_production": "Иначе генерирует %s EU/t под луной и при дожде",
-  "item_info.advanced_solars.electric_lower_production": "Нижний порог генерации: %s EU"
+  "item_info.advanced_solars.electric_lower_production": "Нижний порог генерации: %s EU",
+  "item_info.advanced_solars.molecular.input": "Вход: %s",
+  "item_info.advanced_solars.molecular.output": "Выход: %s",
+  "item_info.advanced_solars.molecular.eu": "Энергия: %s"
 }
